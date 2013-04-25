@@ -5,10 +5,12 @@ import (
     "github.com/hoisie/mustache"
     "log"
     "os"
+    "time"
 )
 
 func index() string {
-    return mustache.RenderFile("view/index.html", map[string]string{"msg":"123"}) 
+    t := time.Now()
+    return mustache.RenderFile("view/index.html", map[string]string{"msg":string(t.Format("2006-01-02 15:04:05"))}) 
 }
 
 
