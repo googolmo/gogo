@@ -1,2 +1,2 @@
 #!/bin/bash
-nohup ./base > /var/log/go.site.log &
+nohup ./go > /var/log/go.site.log &
